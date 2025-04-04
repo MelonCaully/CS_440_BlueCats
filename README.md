@@ -8,4 +8,4 @@ Download C# and .NET extensions for VS Code:
 - IntelliCode for C# Dev Kit
 - C#
 - C# Dev Kit
-- .NET Extention Pack
+- .NET Install Tool
