@@ -1,3 +1,6 @@
 .vscode/
 
-.BlueCatsApp/obj/
+BlueCatsApp/obj/
+
+BlueCatsApp/.vs/
+
