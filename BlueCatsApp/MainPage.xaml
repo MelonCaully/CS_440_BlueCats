@@ -3,22 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlueCatsApp.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+      <Grid RowDefinitions="100, Auto, *"
+            ColumnDefinitions=".50*, .50*"
+            RowSpacing="5"
+            ColumnSpacing="10">
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Open database file" 
-                SemanticProperties.Hint="DEBUG: opens the database file"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+            <Image Grid.ColumnSpan="2"
+                  Source="dnd_logo.png"
+                  MaximumHeightRequest="100"
+                  BackgroundColor="Transparent"/>
+
+            <Button Text="Create A Character"
+                  Grid.Row="1"
+                  MaximumWidthRequest="300"
+                  MinimumWidthRequest="150"
+                  HorizontalOptions="End"/>
+                  
+            <Button Text="My Characters"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  MaximumWidthRequest="300"
+                  MinimumWidthRequest="150"
+                  HorizontalOptions="Start"/>
+
+      </Grid>
 
 </ContentPage>

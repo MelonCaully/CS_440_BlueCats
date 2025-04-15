@@ -1,4 +1,4 @@
-# BLUE CATS DATABASE <img src="blue_cat.png" alt="drawing" width="50" style="position: relative; top: 10px;"/>
+# BLUE CATS DATABASE <img src="BlueCatsApp/Resources/Images/blue_cat.png" alt="drawing" width="50" style="position: relative; top: 10px;"/>
 
 ### Downloads and Installation
 
@@ -26,3 +26,5 @@ VSCode Configuration:
 Resources / Tutorials: 
 - [Microsofts Guide to MAUI with Visual Studio Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&viewFallbackFrom=net-maui-8.0&tabs=visual-studio-code#android)
 - [Getting Started with MAUI in Visual Studio Code](https://www.youtube.com/watch?v=_SEStDLKHMc)
+- [.NET MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-9.0&WT.mc_id=dotnet-29192-cxa)
+- [.NET MAUI For Beginners Tutorial](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY)
