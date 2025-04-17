@@ -28,3 +28,4 @@ Resources / Tutorials:
 - [Getting Started with MAUI in Visual Studio Code](https://www.youtube.com/watch?v=_SEStDLKHMc)
 - [.NET MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-9.0&WT.mc_id=dotnet-29192-cxa)
 - [.NET MAUI For Beginners Tutorial](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY)
+-[.NET with SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli)
