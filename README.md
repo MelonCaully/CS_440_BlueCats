@@ -20,6 +20,8 @@ VSCode Configuration:
 - Configure the workspace by navigating to "MauiProgram.cs" and in bottom right click "{}" to select the C# startup project which will be "BlueCatsApp".
 - Run the project by navigating to "MauiProgram.cs" and in top right click "run project associated with this file".
 - To modify and examine database, startup DB Browser SQLite and open the "dungeonBase.db"
+- In order to test database on windows, move database file into BlueCatsApp/bin/net9.0-windows10.0.19041.0
+- In order to test database on mac, move database file into BlueCatsApp/bin/net9.0-maccatalyst
 
 ### Resources
 
