@@ -6,7 +6,6 @@ namespace BlueCatsApp;
 
 public partial class AddPlayerPage : ContentPage
 {
-	public ArrayList races = new ArrayList();
 	public AddPlayerPage()
 	{
 		InitializeComponent();
@@ -15,17 +14,9 @@ public partial class AddPlayerPage : ContentPage
 			try
 			{
 				connection.Open();
-
-                var RaceCommand = connection.CreateCommand();
-				RaceCommand.CommandText = "SELECT name FROM Race";
-				var RaceReader = RaceCommand.ExecuteReader();
-				while (RaceReader.Read())
-				{
-					races.Add(RaceReader.GetString(0));
-				}
-
-				RaceReader.Close();
-				RacePicker.ItemsSource = races;
+				RacePicker.ItemsSource = populatePicker("Race", connection);
+				ClassPicker.ItemsSource = populatePicker("Class", connection);
+				SpellPicker.ItemsSource = populatePicker("Spell", connection);
 
             }
             catch (Exception ex)
@@ -36,4 +27,16 @@ public partial class AddPlayerPage : ContentPage
 			
 		}
 	}
+	private ArrayList populatePicker(string tableName, SqliteConnection connection)
+	{
+		ArrayList output = new ArrayList();
+		var Command = connection.CreateCommand();
+        Command.CommandText = "SELECT name FROM " +tableName;
+        var Reader = Command.ExecuteReader();
+        while (Reader.Read())
+        {
+            output.Add(Reader.GetString(0));
+        }
+		return output;
+    }
 }
