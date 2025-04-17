@@ -20,8 +20,6 @@ VSCode Configuration:
 - Configure the workspace by navigating to "MauiProgram.cs" and in bottom right click "{}" to select the C# startup project which will be "BlueCatsApp".
 - Run the project by navigating to "MauiProgram.cs" and in top right click "run project associated with this file".
 - To modify and examine database, startup DB Browser SQLite and open the "dungeonBase.db"
-- In order to test database on windows, move database file into BlueCatsApp/bin/net9.0-windows10.0.19041.0
-- In order to test database on mac, move database file into BlueCatsApp/bin/net9.0-maccatalyst
 
 ### Resources
 
@@ -30,4 +28,4 @@ Resources / Tutorials:
 - [Getting Started with MAUI in Visual Studio Code](https://www.youtube.com/watch?v=_SEStDLKHMc)
 - [.NET MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-9.0&WT.mc_id=dotnet-29192-cxa)
 - [.NET MAUI For Beginners Tutorial](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY)
--[.NET with SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli)
+- [.NET with SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli)
