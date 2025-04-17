@@ -12,7 +12,7 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
-        Title= "Add player"
+        Title= "Create A Character"
         ContentTemplate="{DataTemplate local:AddPlayerPage}"
         Route="AddPlayerPage"
         />
