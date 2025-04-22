@@ -11,18 +11,22 @@
             HorizontalOptions="Center" />
         <Grid HorizontalOptions="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="75" />
                 <ColumnDefinition Width="150" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label
                 Text="Name"
                 Grid.Row="0"
                 Grid.Column = "0"
+                VerticalOptions="Center"
                 />
             <Entry x:Name="name"
                 Grid.Row="0"
@@ -33,6 +37,7 @@
                 Text ="Race"
                 Grid.Row="1"
                 Grid.Column="0"
+                VerticalOptions="Center"
                 />
             <Picker x:Name="RacePicker" Grid.Row="1" Grid.Column="1">
                 
@@ -41,6 +46,7 @@
                 Text ="Class"
                 Grid.Row="2"
                 Grid.Column="0"
+                VerticalOptions="Center"
                 />
             <Picker x:Name="ClassPicker" Grid.Row="2" Grid.Column="1">
 
@@ -49,8 +55,19 @@
                 Text ="Spell"
                 Grid.Row="3"
                 Grid.Column="0"
+                VerticalOptions="Center"
             />
             <Picker x:Name="SpellPicker" Grid.Row="3" Grid.Column="1">
+
+            </Picker>
+
+            <Label
+                Text ="Weapon"
+                Grid.Row="4"
+                Grid.Column="0"
+                VerticalOptions="Center"
+            />
+            <Picker x:Name="WeaponPicker" Grid.Row="4" Grid.Column="1">
 
             </Picker>
 

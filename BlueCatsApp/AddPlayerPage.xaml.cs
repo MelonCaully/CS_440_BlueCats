@@ -17,6 +17,7 @@ public partial class AddPlayerPage : ContentPage
 				RacePicker.ItemsSource = populatePicker("Race", connection);
 				ClassPicker.ItemsSource = populatePicker("Class", connection);
 				SpellPicker.ItemsSource = populatePicker("Spell", connection);
+				WeaponPicker.ItemsSource = populatePicker("Weapons", connection);
 
             }
             catch (Exception ex)
