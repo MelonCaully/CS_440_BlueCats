@@ -6,6 +6,7 @@ namespace BlueCatsApp;
 
 public partial class AddPlayerPage : ContentPage
 {
+	private ArrayList spells = new ArrayList();
 	public AddPlayerPage()
 	{
 		InitializeComponent();
@@ -16,7 +17,8 @@ public partial class AddPlayerPage : ContentPage
 				connection.Open();
 				RacePicker.ItemsSource = populatePicker("Race", connection);
 				ClassPicker.ItemsSource = populatePicker("Class", connection);
-				SpellPicker.ItemsSource = populatePicker("Spell", connection);
+				SpellPicker.ItemsSource = spells;//populatePicker("Spell", connection);
+				spells = populatePicker("Spell", connection);
 				WeaponPicker.ItemsSource = populatePicker("Weapons", connection);
 
             }
@@ -40,4 +42,22 @@ public partial class AddPlayerPage : ContentPage
         }
 		return output;
     }
+
+	//empty or fill the spell picker depending on the chosen class
+	void OnClassChange(object sender, EventArgs e)
+    {
+		var picker = (Picker)sender;
+		//if(picker == ClassPicker)
+		//{
+			if(picker.SelectedItem.ToString() == "Cleric" || picker.SelectedItem.ToString() == "Paladin" || picker.SelectedItem.ToString() == "Druid" || picker.SelectedItem.ToString() == "Sorcerer" || picker.SelectedItem.ToString() == "Warlock" || picker.SelectedItem.ToString() == "Wizard" || picker.SelectedItem.ToString() == "Bard")
+			{
+				SpellPicker.ItemsSource = spells;
+			}
+			else
+			{
+				SpellPicker.ItemsSource = new ArrayList();
+				SpellPicker.SelectedIndex = -1;
+			}
+		//}
+	}
 }
