@@ -8,20 +8,15 @@
             x:Name="title_label"
             Text="Add Character"
             VerticalOptions="Center" 
+            
             HorizontalOptions="Center" />
-        <Grid HorizontalOptions="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="75" />
-                <ColumnDefinition Width="150" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <Grid 
+            RowDefinitions="50, 50, *, *, *"
+            ColumnDefinitions=".50*, .50*"
+            RowSpacing="5"
+            ColumnSpacing="10"
+            HorizontalOptions="Center">
+           
             <Label
                 Text="Name"
                 Grid.Row="0"
