@@ -8,12 +8,13 @@
             x:Name="title_label"
             Text="Add Character"
             VerticalOptions="Center" 
-            
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Padding="15"
+        />
         <Grid 
-            RowDefinitions="50, 50, *, *, *"
-            ColumnDefinitions=".50*, .50*"
-            RowSpacing="5"
+            RowDefinitions="50, 50, *, *, *, *"
+            ColumnDefinitions=".25*, .25*, .25*"
+            RowSpacing="30"
             ColumnSpacing="10"
             HorizontalOptions="Center">
            
@@ -22,49 +23,70 @@
                 Grid.Row="0"
                 Grid.Column = "0"
                 VerticalOptions="Center"
-                />
+            />
+
             <Entry x:Name="name"
                 Grid.Row="0"
                 Grid.Column="1"
                 Placeholder="Enter name"
-                   />
+            />
+
             <Label
                 Text ="Race"
                 Grid.Row="1"
                 Grid.Column="0"
                 VerticalOptions="Center"
-                />
-            <Picker x:Name="RacePicker" Grid.Row="1" Grid.Column="1">
-                
-            </Picker>
+            />
+
+            <Picker x:Name="RacePicker" 
+                    Grid.Row="1" 
+                    Grid.Column="1"
+            />
+
             <Label
                 Text ="Class"
                 Grid.Row="2"
                 Grid.Column="0"
                 VerticalOptions="Center"
-                />
-            <Picker x:Name="ClassPicker" Grid.Row="2" Grid.Column="1">
+            />
 
-            </Picker>
+            <Picker x:Name="ClassPicker" 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+            />
+
             <Label
                 Text ="Spell"
                 Grid.Row="3"
                 Grid.Column="0"
                 VerticalOptions="Center"
             />
-            <Picker x:Name="SpellPicker" Grid.Row="3" Grid.Column="1">
 
-            </Picker>
+            <Picker x:Name="SpellPicker" 
+                    Grid.Row="3" 
+                    Grid.Column="1"
+            />
 
             <Label
                 Text ="Weapon"
                 Grid.Row="4"
                 Grid.Column="0"
                 VerticalOptions="Center"
+                MinimumWidthRequest="100"
             />
-            <Picker x:Name="WeaponPicker" Grid.Row="4" Grid.Column="1">
 
-            </Picker>
+            <Picker x:Name="WeaponPicker" 
+                    Grid.Row="4" 
+                    Grid.Column="1"
+                    MinimumWidthRequest="225"
+            />
+
+            <Button Text="Add"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    MinimumWidthRequest="100"
+                    Clicked="OnButtonClicked"
+            />
 
         </Grid>
     </VerticalStackLayout>
