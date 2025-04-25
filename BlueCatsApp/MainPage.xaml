@@ -17,14 +17,16 @@
                   Grid.Row="1"
                   MaximumWidthRequest="300"
                   MinimumWidthRequest="150"
-                  HorizontalOptions="End"/>
+                  HorizontalOptions="End"
+                  Clicked="OnCreateCharacterClicked"/>
                   
             <Button Text="My Characters"
                   Grid.Row="1"
                   Grid.Column="1"
                   MaximumWidthRequest="300"
                   MinimumWidthRequest="150"
-                  HorizontalOptions="Start"/>
+                  HorizontalOptions="Start"
+                  Clicked="OnMyCharacterClicked"/>
 
       </Grid>
 
