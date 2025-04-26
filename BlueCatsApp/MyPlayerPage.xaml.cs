@@ -8,9 +8,9 @@ public partial class MyPlayerPage : ContentPage
 {
     public class Player
     {
-        public string Name { get; set; }
-        public string Race { get; set; }
-        public string Class { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Race { get; set; } = string.Empty;
+        public string Class { get; set; } = string.Empty;
         public int Level { get; set; }
         public string RaceImage => $"{Race}.png";
         public string InfoLine => $"Level {Level} | {Race} | {Class}";
@@ -50,5 +50,33 @@ public partial class MyPlayerPage : ContentPage
 				await DisplayAlert("Error", "Failed to connect to database: " + ex.Message, "OK");
 			}
 		}
+    }
+
+    async void OnTrashClicked(object sender, EventArgs e)
+    {
+        var button = sender as ImageButton;
+        if (button?.BindingContext is not Player player)
+            return;
+
+        bool confirm = await DisplayAlert("Delete Player", $"Are you sure you want to delete {player.Name}?", "Yes", "No");
+        if (!confirm)
+            return;
+
+        using (var connection = new SqliteConnection("Data source = dungeonBase.db"))
+        {
+            try{
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "DELETE FROM Player WHERE name = @name";
+                command.Parameters.AddWithValue("@name", player.Name);
+                command.ExecuteNonQuery();
+
+                LoadPlayers();
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", "Failed to delete player: " + ex.Message, "OK");
+            }
+        }
     }
 }

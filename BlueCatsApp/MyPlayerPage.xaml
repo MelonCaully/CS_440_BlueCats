@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                x:Class="BlueCatsApp.MyPlayerPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlueCatsApp.MyPlayerPage">
 
     <CollectionView x:Name="PlayerCollectionView">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical" Span="2"
-                            HorizontalItemSpacing="15"
-                            VerticalItemSpacing="15" />
+                             HorizontalItemSpacing="15"
+                             VerticalItemSpacing="15" />
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Border Stroke="Black" StrokeThickness="1" Background="White" Padding="10" Margin="10" StrokeShape="RoundRectangle 10">
-                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions=".20*, .50*, .30*" ColumnSpacing="10" RowSpacing="5">
+                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions=".15*, .50*, .35*" ColumnSpacing="10" RowSpacing="5">
         
                         <Image Source="{Binding RaceImage}" 
                                MaximumHeightRequest="80" 
@@ -29,6 +29,13 @@
                                FontSize="14" 
                                Grid.Row="1" 
                                Grid.Column="1"/>
+
+                        <ImageButton Source="trashbin.png"
+                                     Grid.RowSpan="2"
+                                     Grid.Column="2"
+                                     MaximumHeightRequest="50"
+                                     HorizontalOptions="End"
+                                     Clicked="OnTrashClicked"/>
 
                     </Grid>
                 </Border>
