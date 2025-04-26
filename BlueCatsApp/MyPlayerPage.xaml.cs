@@ -12,6 +12,8 @@ public partial class MyPlayerPage : ContentPage
         public string Race { get; set; }
         public string Class { get; set; }
         public int Level { get; set; }
+        public string RaceImage => $"{Race}.png";
+        public string InfoLine => $"Level {Level} | {Race} | {Class}";
     }
     
     public MyPlayerPage()

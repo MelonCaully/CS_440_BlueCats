@@ -8,21 +8,29 @@
             <GridItemsLayout Orientation="Vertical" Span="2"
                             HorizontalItemSpacing="15"
                             VerticalItemSpacing="15" />
-    </CollectionView.ItemsLayout>
+        </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Border Stroke="Black"
-                        StrokeThickness="1"
-                        Background="White"
-                        Padding="10"
-                        Margin="10"
-                        StrokeShape="RoundRectangle 10">
-                    <VerticalStackLayout Spacing="10">
-                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16"/>
-                        <Label Text="{Binding Race}" FontSize="14" />
-                        <Label Text="{Binding Class}" FontSize="14" />
-                        <Label Text="{Binding Level}" FontSize="14" />
-                    </VerticalStackLayout>
+                <Border Stroke="Black" StrokeThickness="1" Background="White" Padding="10" Margin="10" StrokeShape="RoundRectangle 10">
+                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions=".20*, .50*, .30*" ColumnSpacing="10" RowSpacing="5">
+        
+                        <Image Source="{Binding RaceImage}" 
+                               MaximumHeightRequest="80" 
+                               BackgroundColor="Transparent" 
+                               Grid.RowSpan="2"
+                               HorizontalOptions="Center"/>
+
+                        <Label Text="{Binding Name}" 
+                               FontAttributes="Bold" 
+                               FontSize="16" 
+                               Grid.Column="1"/>
+
+                        <Label Text="{Binding InfoLine}" 
+                               FontSize="14" 
+                               Grid.Row="1" 
+                               Grid.Column="1"/>
+
+                    </Grid>
                 </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
