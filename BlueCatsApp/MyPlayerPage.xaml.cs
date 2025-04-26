@@ -79,4 +79,10 @@ public partial class MyPlayerPage : ContentPage
             }
         }
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        LoadPlayers(); // Refresh the CollectionView
+    }
 }
