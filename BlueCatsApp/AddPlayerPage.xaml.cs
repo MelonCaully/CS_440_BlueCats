@@ -51,7 +51,7 @@ public partial class AddPlayerPage : ContentPage
         var reader = command.ExecuteReader();
         while (reader.Read())
         {
-            output.Add	(reader.GetString(0));
+            output.Add(reader.GetString(0));
         }
 		return output;
     }
