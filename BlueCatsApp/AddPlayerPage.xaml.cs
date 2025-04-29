@@ -101,7 +101,13 @@ public partial class AddPlayerPage : ContentPage
 		{
 			await DisplayAlert("Error", "Please pick a class.", "OK");
 			return;
-		} 
+		}
+
+		//Converts an null spell string into an empty one
+		if (string.IsNullOrEmpty(playerSpell))
+		{
+			playerSpell = "";
+		}
 
 		// establishes a connection with database and inserts variables into database
 		using (var connection = new SqliteConnection("Data source = dungeonbase.db"))
