@@ -80,6 +80,14 @@ public partial class MyPlayerPage : ContentPage
         }
     }
 
+    async public void OnPlayerTapped(object sender, EventArgs e)
+    {
+        var view = sender as VisualElement;
+        var tappedPlayer = view?.BindingContext as Player;
+
+        await Navigation.PushAsync(new PlayerSheetPage(tappedPlayer));
+    }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();

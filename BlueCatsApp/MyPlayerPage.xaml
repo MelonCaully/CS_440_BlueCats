@@ -12,6 +12,11 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Border Stroke="Black" StrokeThickness="1" Background="White" Padding="10" Margin="10" StrokeShape="RoundRectangle 10">
+
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPlayerTapped"/>
+                    </Border.GestureRecognizers>
+                    
                     <Grid RowDefinitions="Auto, Auto" ColumnDefinitions=".15*, .50*, .35*" ColumnSpacing="10" RowSpacing="5">
         
                         <Image Source="{Binding RaceImage}" 

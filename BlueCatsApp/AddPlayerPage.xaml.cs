@@ -85,7 +85,7 @@ public partial class AddPlayerPage : ContentPage
 		string playerName = name.Text.Trim();
 		string? playerRace = RacePicker.SelectedItem?.ToString();
 		string? playerClass = ClassPicker.SelectedItem?.ToString();
-		string? playerSpell = SpellPicker.SelectedItem?.ToString();
+		string? playerSpell = SpellPicker.SelectedItem?.ToString() ?? string.Empty;
 		string? playerWeapon = WeaponPicker.SelectedItem?.ToString();
 		
 		// Checks to see if entries were enterd before INSERT
@@ -101,12 +101,6 @@ public partial class AddPlayerPage : ContentPage
 		{
 			await DisplayAlert("Error", "Please pick a class.", "OK");
 			return;
-		}
-
-		//Converts an null spell string into an empty one
-		if (string.IsNullOrEmpty(playerSpell))
-		{
-			playerSpell = "";
 		}
 
 		// establishes a connection with database and inserts variables into database
