@@ -11,14 +11,30 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
     <ShellContent
         Title= "Create A Character"
         ContentTemplate="{DataTemplate local:AddPlayerPage}"
-        Route="AddPlayerPage"
-        />
+        Route="AddPlayerPage"/>
+
     <ShellContent
         Title= "My Characters"
         ContentTemplate="{DataTemplate local:MyPlayerPage}"
-        Route="MyPlayerPage"
-        />
+        Route="MyPlayerPage"/>
+
+    <ShellContent
+        Title= "Races"
+        ContentTemplate="{DataTemplate local:RacesPage}"
+        Route="RacesPage"/>
+
+    <ShellContent
+        Title= "Spells"
+        ContentTemplate="{DataTemplate local:SpellsPage}"
+        Route="SpellsPage"/>
+
+    <ShellContent
+        Title= "Weapons"
+        ContentTemplate="{DataTemplate local:WeaponsPage}"
+        Route="WeaponsPage"/>
+
 </Shell>

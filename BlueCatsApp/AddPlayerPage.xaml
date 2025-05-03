@@ -6,7 +6,7 @@
     <VerticalStackLayout>
         <Label 
             x:Name="title_label"
-            Text=""
+            Text="Add Player"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             Padding="15"
