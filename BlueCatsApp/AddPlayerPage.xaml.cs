@@ -7,12 +7,11 @@ namespace BlueCatsApp;
 
 public partial class AddPlayerPage : ContentPage
 {
-	private ArrayList spells = new ArrayList();
 	public AddPlayerPage()
 	{
 		InitializeComponent();
 		ClassPicker.SelectedIndexChanged += OnClassChange;
-		using (var connection = new SqliteConnection("Data source = dungeonbase.db"))
+		using (var connection = new SqliteConnection("Data source = dungeonBase.db"))
 		{
 			try
 			{
@@ -30,13 +29,13 @@ public partial class AddPlayerPage : ContentPage
 		}
 	}
 
-	private void OnClassChange(object? sender, EventArgs e)
+	async private void OnClassChange(object? sender, EventArgs e)
 	{
 		var selectedClass = ClassPicker.SelectedItem?.ToString();
 		if (string.IsNullOrEmpty(selectedClass))
 		    return;	
 
-		using (var connection = new SqliteConnection("Data source = dungeonbase.db"))
+		using (var connection = new SqliteConnection("Data source = dungeonBase.db"))
 		{
 			try
 			{

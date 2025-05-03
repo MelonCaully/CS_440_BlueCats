@@ -6,7 +6,7 @@
     <VerticalStackLayout>
         <Label 
             x:Name="title_label"
-            Text="Add Character"
+            Text=""
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             Padding="15"
