@@ -1,6 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlueCatsApp.SpellsPage"
              Title="Spells">
 
+    <!-- CollectionView to display the spells -->
+    <CollectionView x:Name="SpellsCollectionView">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="10">
+                    <Label Text="{Binding SpellName}" FontSize="20" FontAttributes="Bold"/>
+                    <Label Text="{Binding SpellLevel}" FontSize="14"/>
+                    <Label Text="{Binding CastingTime}" FontSize="14"/>
+                    <Label Text="{Binding Duration}" FontSize="14"/>
+                    <Label Text="{Binding Range}" FontSize="14"/>
+                    <Label Text="{Binding Damage}" FontSize="14"/>
+                    <Label Text="{Binding HitDice}" FontSize="14"/>
+                    <Label Text="{Binding Effect}" FontSize="14"/>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>

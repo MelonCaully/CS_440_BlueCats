@@ -23,6 +23,11 @@
         Route="MyPlayerPage"/>
 
     <ShellContent
+        Title= "Classes"
+        ContentTemplate="{DataTemplate local:ClassesPage}"
+        Route="ClassesPage"/>
+
+    <ShellContent
         Title= "Races"
         ContentTemplate="{DataTemplate local:RacesPage}"
         Route="RacesPage"/>
