@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BlueCatsApp.MyPlayerPage">
+             x:Class="BlueCatsApp.MyPlayerPage"
+             BackgroundColor="#FF290000">
 
     <CollectionView x:Name="PlayerCollectionView">
         <CollectionView.ItemsLayout>
@@ -11,19 +12,20 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Border Stroke="Black" StrokeThickness="1" Background="White" Padding="10" Margin="10" StrokeShape="RoundRectangle 10">
+                <Border Stroke="#FFE70404" StrokeThickness="2" BackgroundColor="White" Padding="10" Margin="10" StrokeShape="RoundRectangle 25">
 
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnPlayerTapped"/>
                     </Border.GestureRecognizers>
                     
                     <Grid RowDefinitions="Auto, Auto" ColumnDefinitions=".15*, .50*, .35*" ColumnSpacing="10" RowSpacing="5">
-        
-                        <Image Source="{Binding RaceImage}" 
+                        <Border Grid.RowSpan="2" StrokeShape="RoundRectangle 15" StrokeThickness="0">
+                             <Image Source="{Binding RaceImage}" 
                                MaximumHeightRequest="80" 
                                BackgroundColor="Transparent" 
                                Grid.RowSpan="2"
                                HorizontalOptions="Center"/>
+                        </Border>
 
                         <Label Text="{Binding Name}" 
                                FontAttributes="Bold" 

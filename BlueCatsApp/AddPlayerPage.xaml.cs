@@ -29,7 +29,7 @@ public partial class AddPlayerPage : ContentPage
 		}
 	}
 
-	async private void OnClassChange(object? sender, EventArgs e)
+	private void OnClassChange(object? sender, EventArgs e)
 	{
 		var selectedClass = ClassPicker.SelectedItem?.ToString();
 		if (string.IsNullOrEmpty(selectedClass))

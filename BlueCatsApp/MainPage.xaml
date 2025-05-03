@@ -1,33 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BlueCatsApp.MainPage">
+             x:Class="BlueCatsApp.MainPage"
+             BackgroundColor="#FF290000">
 
-      <Grid RowDefinitions="100, Auto, *"
-            ColumnDefinitions=".50*, .50*"
-            RowSpacing="5"
-            ColumnSpacing="10">
+      <VerticalStackLayout VerticalOptions="Center">
 
-            <Image Grid.ColumnSpan="2"
-                  Source="dnd_logo.png"
-                  MaximumHeightRequest="100"
-                  BackgroundColor="Transparent"/>
+            <Border
+                  Stroke="#FFE70404"
+                  StrokeThickness="3"
+                  Padding="15"
+                  BackgroundColor="White"
+                  HorizontalOptions="Center"
+                  StrokeShape="RoundRectangle 17"
+                  Margin="200">
 
-            <Button Text="Create A Character"
-                  Grid.Row="1"
-                  MaximumWidthRequest="300"
-                  MinimumWidthRequest="150"
-                  HorizontalOptions="End"
-                  Clicked="OnCreateCharacterClicked"/>
-                  
-            <Button Text="My Characters"
-                  Grid.Row="1"
-                  Grid.Column="1"
-                  MaximumWidthRequest="300"
-                  MinimumWidthRequest="150"
-                  HorizontalOptions="Start"
-                  Clicked="OnMyCharacterClicked"/>
+                  <Grid RowDefinitions="Auto, Auto"
+                        ColumnDefinitions=".50*, .50*"
+                        RowSpacing="5"
+                        ColumnSpacing="10">
 
-      </Grid>
+                        <Image Grid.ColumnSpan="2"
+                              Source="dnd_logo.png"
+                              MaximumHeightRequest="100"
+                              BackgroundColor="Transparent"/>
 
+                        <Button Text="Create A Character"
+                              Grid.Row="1"
+                              MaximumWidthRequest="300"
+                              MinimumWidthRequest="150"
+                              HorizontalOptions="End"
+                              Clicked="OnCreateCharacterClicked"/>
+                              
+                        <Button Text="My Characters"
+                              Grid.Row="1"
+                              Grid.Column="1"
+                              MaximumWidthRequest="300"
+                              MinimumWidthRequest="150"
+                              HorizontalOptions="Start"
+                              Clicked="OnMyCharacterClicked"/>
+
+                  </Grid>
+            </Border>
+            
+      </VerticalStackLayout>
 </ContentPage>

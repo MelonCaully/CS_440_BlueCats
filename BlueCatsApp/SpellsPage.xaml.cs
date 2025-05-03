@@ -30,7 +30,9 @@ namespace BlueCatsApp
                             CastingTime = reader.GetString(2),
                             Duration = reader.GetString(3),
                             Range = reader.GetString(4),
-                            Damage = reader.GetString(5)
+                            Damage = reader.GetString(5),
+                            HitDice = reader.IsDBNull(6) ? null : reader.GetString(6),
+                            Effect = reader.GetString(7)
                         });
                     }
                     SpellsCollectionView.ItemsSource = output;
@@ -44,14 +46,14 @@ namespace BlueCatsApp
 
         public class Spell
         {
-            public string SpellName { get; set; }
-            public string SpellLevel { get; set; }
-            public string CastingTime { get; set; }
-            public string Duration { get; set; }
-            public string Range { get; set; }
-            public string Damage { get; set; }
-            public string HitDice { get; set; }
-            public string Effect { get; set; }
+            public required string SpellName { get; set; }
+            public required string SpellLevel { get; set; }
+            public required string CastingTime { get; set; }
+            public required string Duration { get; set; }
+            public required string Range { get; set; }
+            public required string Damage { get; set; }
+            public string? HitDice { get; set; }
+            public required string Effect { get; set; }
         }
     }
 }

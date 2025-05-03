@@ -2,22 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlueCatsApp.SpellsPage"
-             Title="Spells">
+             Title="Spells"
+             BackgroundColor="#FF290000">
 
     <!-- CollectionView to display the spells -->
     <CollectionView x:Name="SpellsCollectionView">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2"
+                             HorizontalItemSpacing="15"
+                             VerticalItemSpacing="15" />
+        </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout Padding="10">
-                    <Label Text="{Binding SpellName}" FontSize="20" FontAttributes="Bold"/>
-                    <Label Text="{Binding SpellLevel}" FontSize="14"/>
-                    <Label Text="{Binding CastingTime}" FontSize="14"/>
-                    <Label Text="{Binding Duration}" FontSize="14"/>
-                    <Label Text="{Binding Range}" FontSize="14"/>
-                    <Label Text="{Binding Damage}" FontSize="14"/>
-                    <Label Text="{Binding HitDice}" FontSize="14"/>
-                    <Label Text="{Binding Effect}" FontSize="14"/>
-                </StackLayout>
+                <Border Stroke="#FFE70404" StrokeThickness="2" BackgroundColor="White" StrokeShape="RoundRectangle 25">
+                    <Grid RowDefinitions="Auto, Auto">
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding SpellName}" FontSize="20" FontAttributes="Bold"/>
+                            <Label Text="{Binding SpellLevel}" FontSize="14"/>
+                            <Label Text="{Binding CastingTime}" FontSize="14"/>
+                            <Label Text="{Binding Duration}" FontSize="14"/>
+                            <Label Text="{Binding Range}" FontSize="14"/>
+                            <Label Text="{Binding Damage}" FontSize="14"/>
+                            <Label Text="{Binding HitDice}" FontSize="14"/>
+                            <Label Text="{Binding Effect}" FontSize="14"/>
+                        </StackLayout>
+                    </Grid>
+                </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
