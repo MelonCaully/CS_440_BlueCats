@@ -4,7 +4,7 @@
              Title="Create A Character"
              BackgroundColor="#FF290000">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center">
         <Label 
             x:Name="title_label"
             Text=""
@@ -88,7 +88,7 @@
                         Grid.Column="1"
                         MinimumWidthRequest="100"
                         Clicked="OnButtonClicked"
-                        BackgroundColor="#FFE70404" />
+                        />
             </Grid>
         </Border>
     </VerticalStackLayout>

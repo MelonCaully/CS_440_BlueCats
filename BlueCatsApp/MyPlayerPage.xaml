@@ -19,7 +19,7 @@
                     </Border.GestureRecognizers>
                     
                     <Grid RowDefinitions="Auto, Auto" ColumnDefinitions=".15*, .50*, .35*" ColumnSpacing="10" RowSpacing="5">
-                        <Border Grid.RowSpan="2" StrokeShape="RoundRectangle 15" StrokeThickness="0">
+                        <Border Grid.RowSpan="2" StrokeShape="RoundRectangle 20"  Margin="6" StrokeThickness="0">
                              <Image Source="{Binding RaceImage}" 
                                MaximumHeightRequest="80" 
                                BackgroundColor="Transparent" 
