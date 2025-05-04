@@ -1,28 +1,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlueCatsApp.PlayerSheetPage"
-             Title="Player Sheet">
+             Title="Player Sheet"
+             BackgroundColor="#FF290000">
     <ScrollView>
-        <Grid Padding="20"
-              RowSpacing="10"
-              ColumnDefinitions="Auto, *, Auto, *, Auto, *, Auto, Auto"
-              RowDefinitions="Auto">
-            <!-- Name -->
-            <Label Text="Name:" FontAttributes="Bold"/>
-            <Label Text="{Binding Name}" Grid.Column="1"/>
+            <Grid Padding="20"
+                RowSpacing="10"
+                ColumnDefinitions="Auto, *, Auto, *, Auto, *, Auto, Auto"
+                RowDefinitions="Auto">
+                <!-- Name -->
+                <Border Grid.ColumnSpan="1" Grid.RowSpan="1" StrokeShape="RoundRectangle 15" BackgroundColor="White" Padding="10" Stroke="#FFE70404" StrokeThickness="2">
+                    <HorizontalStackLayout >
+                        <Label Text="Name:" FontAttributes="Bold" Margin="5"/>
+                        <Label Text="{Binding Name}" Margin="5"/>
+                    </HorizontalStackLayout>
+                </Border>
 
-            <!-- Race -->
-            <Label Text="Race:" Grid.Column="2" FontAttributes="Bold"/>
-            <Label Text="{Binding Race}" Grid.Column="3"/>
+                <!-- Race -->
+                <Border Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="2" StrokeShape="RoundRectangle 15" BackgroundColor="White" Padding="10" Stroke="#FFE70404" StrokeThickness="2">
+                    <HorizontalStackLayout > 
+                        <Label Text="Race:" FontAttributes="Bold"  Margin="5"/>
+                        <Label Text="{Binding Race}"  Margin="5"/>
+                    </HorizontalStackLayout>
+                </Border>
+            
+                <!-- Class -->
+                <Border Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="4" StrokeShape="RoundRectangle 15" BackgroundColor="White" Padding="10" Stroke="#FFE70404" StrokeThickness="2">
+                    <HorizontalStackLayout > 
+                        <Label Text="Class:" FontAttributes="Bold" Margin="5"/>
+                        <Label Text="{Binding Class}" Margin="5"/>
+                    </HorizontalStackLayout>
+                </Border>
 
-            <!-- Class -->
-            <Label Text="Class:" Grid.Column="4" FontAttributes="Bold"/>
-            <Label Text="{Binding Class}" Grid.Column="5"/>
+                <!-- Level -->
+                <Border Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="6" StrokeShape="RoundRectangle 15" BackgroundColor="White" Padding="10" Stroke="#FFE70404" StrokeThickness="2">
+                    <HorizontalStackLayout >    
+                        <Label Text="Level:" Grid.Column="6" FontAttributes="Bold" Margin="5"/>
+                        <Label Text="{Binding Level}" Grid.Column="7" Margin="5"/>
+                    </HorizontalStackLayout>
+                </Border>
 
-            <!-- Level -->
-            <Label Text="Level:" Grid.Column="6" FontAttributes="Bold"/>
-            <Label Text="{Binding Level}" Grid.Column="7"/>
-
-        </Grid>
+            </Grid>
     </ScrollView>
 </ContentPage>
