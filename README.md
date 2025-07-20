@@ -1,31 +1,71 @@
-# BLUE CATS DATABASE <img src="BlueCatsApp/Resources/Images/blue_cat.png" alt="drawing" width="50" style="position: relative; top: 10px;"/>
+# D&D Player Sheet Generator <img src="BlueCatsApp/Resources/Images/blue_cat.png" alt="drawing" width="50" style="position: relative; top: 10px;"/>
 
-### Downloads and Installation
+A cross-platform Dungeons & Dragons player sheet generator built with .NET MAUI and backed by SQLite. Designed to provide a clean, user-friendly interface for managing characters, stats, and inventories — all in one place.
 
-Install DB Browser: <https://sqlitebrowser.org/dl/>
+This tool aims to simplify character management for DMs and players alike, offering a digital alternative to paper sheets, while maintaining flexibility and customizability for homebrew content.
 
-Install SQLite: <https://www.tutorialspoint.com/sqlite/sqlite_installation.htm>
+## 🎯 Motivation
 
-Install .NET SDK: <https://dotnet.microsoft.com/en-us/download>
+Managing a D&D campaign or character should be immersive — not administrative. With this app, you can:
 
-Download C# and .NET extensions for VS Code:
-- IntelliCode for C# Dev Kit
-- C#
-- C# Dev Kit
-- .NET MAUI
+- 📋 Create and manage character sheets with persistent data storage via SQLite.
 
-### Configuration
+- 🧙 Edit stats, abilities, and inventory directly in the UI.
 
-VSCode Configuration: 
-- Configure the workspace by navigating to "MauiProgram.cs" and in bottom right click "{}" to select the C# startup project which will be "BlueCatsApp".
-- Run the project by navigating to "MauiProgram.cs" and in top right click "run project associated with this file".
-- To modify and examine database, startup DB Browser SQLite and open the "dungeonBase.db"
+- 💾 Use locally stored data without needing an internet connection.
 
-### Resources
+- 🔧 Customize easily for different editions or homebrew campaigns.
 
-Resources / Tutorials: 
-- [Microsofts Guide to MAUI with Visual Studio Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&viewFallbackFrom=net-maui-8.0&tabs=visual-studio-code#android)
-- [Getting Started with MAUI in Visual Studio Code](https://www.youtube.com/watch?v=_SEStDLKHMc)
-- [.NET MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-9.0&WT.mc_id=dotnet-29192-cxa)
-- [.NET MAUI For Beginners Tutorial](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY)
-- [.NET with SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli)
+Whether you're a Dungeon Master running multiple NPCs or a player tracking every spell slot, this app aims to make the experience smooth, reliable, and enjoyable.
+
+## ⚙️ Installation & Setup
+
+Prerequisites
+Install the following before running the project:
+
+- SQLite — for local database storage
+
+- DB Browser for SQLite — for exploring/editing the database manually
+
+- .NET SDK — for building and running the app
+
+- [VS Code Extensions]
+    
+    - C#
+
+    - C# Dev Kit
+
+    - IntelliCode for C# Dev Kit
+
+    - .NET MAUI
+
+## 🛠️ Configuration
+
+VS Code Setup
+
+1. Open the project in Visual Studio Code 
+
+1. Navigate to MauiProgram.cs
+
+1. In the bottom right, select the startup project as BlueCatsApp
+
+1. In the top right, click "Run project associated with this file" to launch the app
+
+Database Access
+
+- Launch DB Browser for SQLite
+
+- Open dungeonBase.db from the root project directory to view/edit database tables
+
+## 🧪 Testing
+
+Testing is currently manual via interactive use, but future versions may support unit tests for database interactions and UI behavior.
+
+## 🤝 Contributing
+If you'd like to help improve this project:
+```bash
+git clone https://github.com/MelonCaully/CS_440_BlueCats
+cd CS_440_BlueCats
+```
+Then fork and submit a pull request to the main branch. Contributions to UI design, database schema, or feature ideas are always welcome!
+
